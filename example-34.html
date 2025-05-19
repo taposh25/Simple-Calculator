@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Background Change</title>
+    <style>
+        .change{
+            background-color: cadetblue;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="clickedMe">Click Me</button>
+    <p id="text">Change my background-color after click the button</p>
+
+    <script>
+        const button = document.getElementById("clickedMe");
+        const text = document.getElementById("text");
+
+        button.addEventListener("click", function(){
+            text.style.backgroundColor = "Red";
+            text.style.color = "white";
+            text.classList.toggle("change");
+        })
+    </script>
+    
+</body>
+</html>

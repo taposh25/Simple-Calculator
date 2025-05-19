@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Toggle Text</title>
+    <style>
+        #text{
+            font-size: 16px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="text">This is Toggle Text</h2>
+    <button onclick= "chnageSize()">Change Size</button>
+
+    <script>
+
+         let isLarge = false;
+        function chnageSize(){
+            const element = document.getElementById("text");
+
+            if(isLarge){
+                element.style.fontSize = "16px";
+            }
+            else{
+                element.style.fontSize = "32px";
+            }
+            isLarge =! isLarge;
+        }
+    </script>
+
+
+</body>
+</html>

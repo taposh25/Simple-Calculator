@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Class List</title>
+  <style>
+      .active{
+        background-color: green;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+    <button id="toggleBtn">Toggle Button</button>
+    <p id="text">Click the button to toggle class</p>
+
+    <script>
+        const button = document.getElementById("toggleBtn");
+        const text = document.getElementById("text");
+
+        button.addEventListener("click", function(){
+        text.classList.toggle("active");
+        })
+
+    </script>
+    
+</body>
+</html>

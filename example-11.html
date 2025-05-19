@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create list</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+    </ul>
+        <br>
+        <button onclick="AddList()">Add List</button>
+        
+
+        <script>
+            function AddList(){
+                let ul = document.getElementById("myList");
+                let newLi = document.createElement("li");
+                newLi.innerText = " I love You swarnali Devi";
+                
+     const firstLi = ul.getElementsByTagName("li")[0];  
+      ul.insertBefore(newLi, firstLi);
+
+
+   
+                
+
+            }
+
+        </script>
+    </ul>
+</body>
+</html>

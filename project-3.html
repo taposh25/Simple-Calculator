@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+</head>
+<body>
+    <ul id="list">
+        <li id="box">Item-1</li>
+        <li id="box">Item-2</li>
+        <li id="box">Itenm-3</li>
+    </ul>
+
+    <button onclick= clickedMe()>Click Me </button>
+    <p id="output"></p>
+
+    <script>
+        function clickedMe(){
+            const ul = document.getElementById("list");
+            const li = document.createElement("li");
+            li.textContent = "new Item";
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>

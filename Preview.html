@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Input Preview </title>
+    <style>
+        body{
+            font-family: sans-serif;
+            padding: 50px;
+        }
+        input{
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Live Input</h2>
+    <input type="text"  id="liveInput" placeholder="White somethins...">
+    <p id="previewText">Preview All Appear here</p>
+
+    <script>
+        const inputField = document.getElementById("liveInput");
+        const preview = document.getElementById("previewText");
+
+
+        inputField.addEventListener("input", function(){
+           const value = inputField.value.trim();
+
+           preview.textContent = value ? value : "Preview All Appear here ...."
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App List</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li{
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            padding: 8px 12 px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button{
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>To Do App List</h2>
+    <input type="text" id="taskInput" placeholder="Write a Task....">
+    <button onclick = "addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask(){
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+
+            if(taskText === ""){
+                alert("Please enter a task!");
+                return;
+            }
+            const li = document.createElement("li");
+            li.textContent = taskText;
+
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+
+
+            removeBtn.onclick = function(){
+                li.remove();
+            };
+            li.appendChild(removeBtn);
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+
+        }
+    </script>
+</body>
+</html>

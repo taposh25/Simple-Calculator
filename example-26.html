@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>removeEventListener Example</title>
+</head>
+<body>
+
+  <button id="clickBtn">Click Me</button>
+  <button id="removeBtn">Remove Click Event</button>
+  <p id="output">Event is active...</p>
+
+  <script>
+    const clickBtn = document.getElementById("clickBtn");
+    const removeBtn = document.getElementById("removeBtn");
+    const output = document.getElementById("output");
+
+    function handleClick() {
+      output.innerText = "Button clicked!";
+    }
+
+    clickBtn.addEventListener("click", handleClick);
+
+    removeBtn.addEventListener("click", function () {
+      clickBtn.removeEventListener("click", handleClick);
+      output.innerText = "Click event removed!";
+    });
+  </script>
+
+</body>
+</html>

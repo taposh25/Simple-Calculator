@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.add Example</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="text">This is a sample paragraph.</p>
+  <button onclick="addClass()">Add Highlight Class</button>
+
+  <script>
+    function addClass() {
+      const element = document.getElementById("text");
+      element.classList.add("highlight");
+    }
+  </script>
+
+</body>
+</html>

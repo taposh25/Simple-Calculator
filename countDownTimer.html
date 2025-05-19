@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 50px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 50px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>⏳ Countdown Timer</h2>
+  <h1 id="timer">10</h1>
+
+  <script>
+    let timeLeft = 10; // Start from 10 seconds
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      if (timeLeft >= 0) {
+        timerElement.textContent = timeLeft;
+      } else {
+        clearInterval(countdown);
+        timerElement.textContent = "Time's up!";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

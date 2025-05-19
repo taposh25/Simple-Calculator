@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Attribute</title>
+</head>
+<body>
+    <a id="myLink" href="https://example.com">Visit Example</a>
+    <br><br>
+    <button onclick="showHref">Show Href</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showHref(){
+            const link = document.getElementById("myLink");
+            const herfValue = link.getAttribute("href");
+            document.getElementById("output").innerText = "href value is " + herfValue;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Position</title>
+</head>
+<body>
+
+  <h3>Mouse Position Tracker</h3>
+  <p>Click anywhere and see the mouse position below:</p>
+
+  <p id="position">Mouse position will appear here</p>
+
+  <script>
+    document.addEventListener("click", function(event) {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      document.getElementById("position").innerText =
+        `Mouse X: ${x}px, Mouse Y: ${y}px`;
+    });
+  </script>
+
+</body>
+</html>

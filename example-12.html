@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Class to Div</title>
+  <style>
+    .newDivClass {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="addDivWithClass()">Create Div</button>
+
+  <script>
+    function addDivWithClass() {
+      const newDiv = document.createElement("div"); 
+      newDiv.classList.add("newDivClass"); 
+      newDiv.innerText = "This is a new div with a class."; 
+
+      document.body.appendChild(newDiv); 
+    }
+  </script>
+
+</body>
+</html>

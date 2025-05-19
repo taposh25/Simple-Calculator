@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>classList.toggle Example</title>
+  <style>
+    .active {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleBtn">Click to Toggle Class</button>
+
+  <p id="text" style="margin-top: 20px;">This is a sample paragraph</p>
+
+  <script>
+    const button = document.getElementById("toggleBtn");
+    const text = document.getElementById("text");
+
+    button.addEventListener("click", function() {
+      text.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

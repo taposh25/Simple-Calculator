@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>setAttribute Example</title>
+</head>
+<body>
+
+  <button onclick="addImage()">Add Image</button>
+
+  <div id="imageContainer"></div>
+
+  <script>
+    function addImage() {
+      const img = document.createElement("img");  
+      img.setAttribute("src", "https://via.placeholder.com/150"); 
+      img.setAttribute("alt", "Placeholder Image");  
+      img.setAttribute("width", "150");        
+
+      const container = document.getElementById("imageContainer");
+      container.appendChild(img);
+    }
+  </script>
+
+</body>
+</html>

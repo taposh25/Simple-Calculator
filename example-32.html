@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList.remove Example</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text" class="highlight">This is sample of paragraph</p>
+    <button onclick="clickedMe()">Click Me</button>
+
+    <script>
+        function clickedMe(){
+            const element = document.getElementById("text");
+            element.classList.remove("highlight");
+
+        }
+    </script>
+</body>
+</html>

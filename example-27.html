@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event.target.element</title>
+</head>
+<body>
+    <h3>Click on any element bellow</h3>
+    <button>Button 1</button>
+    <button>Button 2</button>
+
+    <p>Paragraph Element</p>
+
+    <div style="width:100px;height:100px;background-color:lightblue;line-height:100px;text-align:center;margin-top:10px;">
+        DIV Box
+    </div>
+    <p id="output" style="margin-top:20px;font-weight:bold;color:green;">Clicked element info will appear here.</p>
+
+    <script>
+        document.addEventListener("click", function(event){
+            const clickedTag = event.target.tagName;
+            const clickedText = event.target.innerText;
+
+            document.getElementById("output").innerText = 
+            `You Clicked a <${"clickTag"}> with text: "${clickedText}"`;
+        } );
+    </script>
+
+</body>
+</html>

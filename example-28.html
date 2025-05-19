@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>preventDefault Example - Form</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <input type="text" placeholder="Your name" required />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="output" style="color:blue; font-weight: bold; margin-top: 20px;"></p>
+
+  <script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      document.getElementById("output").innerText = "Form submission prevented using event.preventDefault()";
+    });
+  </script>
+
+</body>
+</html>

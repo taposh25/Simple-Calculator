@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove Task</title>
+    <style>
+     body{
+        padding: 20px;
+        font-family: sans-serif;
+     }
+     ul{
+        list-style-type: none;
+        padding: 0;
+     }
+     li{
+        background-color: #f2f2f2;
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+     }
+     button{
+        margin-left: 10px;
+     }
+    </style>
+</head>
+<body>
+    <h2>To Do App List</h2>
+    <br><br>
+    <input type="text" id="taskInput" placeholder="Enter your task..">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask(){
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+
+            if(taskText === ""){
+                alert("Please enter a task");
+                return;
+            }
+            const li = document.createElement("li");
+            li.textContent = taskText;
+
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+
+            removeBtn.onclick = function(){
+                li.remove();
+            };
+
+           li.appendChild(removeBtn);
+           document.getElementById("taskList").appendChild(li);
+           input.value = "";
+
+
+        }
+    </script>
+</body>
+</html>

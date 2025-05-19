@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Anchor HREF</title>
+</head>
+<body>
+
+  <h3>Change Link Example</h3>
+
+<a id = "myLink" href="https://www.google.com">Visit Google</a>
+<br><br>
+<button onclick="ChangeLink()">Change Link</button>
+
+<script>
+    function ChangeLink(){
+        let link = document.getElementById('myLink');
+        link.href = "https://www.wikipedia.org";
+        link.innerText = "Visit Wikipedia";
+    }
+</script>
+    
+  </script>
+
+</body>
+</html>
